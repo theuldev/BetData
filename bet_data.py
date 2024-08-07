@@ -62,7 +62,9 @@ def create_payment(data):
     "notification_url": "https://backend.botconversa.com.br/api/v1/webhooks-automation/catch/8476/24JR7uiXjkVY/"
     }
     return payment_data
-    
+@app.route("/")    
+def hello():
+    return "Hello World!"
 app.run(port=5001, host='192.168.1.169', debug=False,ssl_context=("certificates/cert.pem", "certificates/key.pem"))
 
 
